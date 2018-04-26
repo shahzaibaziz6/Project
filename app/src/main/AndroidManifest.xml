@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SendReceivceActivity"></activity>
+        <activity android:name=".SendReceiveActivity" />
+        <activity android:name=".SendActivity" />
+        <activity android:name=".ReceivceActivity"></activity>
     </application>
 
 </manifest>
