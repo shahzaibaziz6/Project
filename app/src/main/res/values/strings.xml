@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">File Hub</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="send_receive_txt_send">Send</string>
 
 </resources>
