@@ -9,16 +9,31 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
+        android:gravity="center"
         android:background="@color/colorPrimaryDark">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_in_button"
         android:foregroundTint="@android:color/black"
         android:shadowColor="@android:color/holo_blue_dark"
         android:text="@string/send_receive_txt_send"
         android:textStyle="italic"
+        android:textColor="@color/font_color"
         android:textSize="@dimen/font_size"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/btn_bg_color"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_in_button"
+            android:foregroundTint="@android:color/black"
+            android:shadowColor="@android:color/holo_blue_dark"
+            android:text="@string/send_receive_txt_receive"
+            android:textStyle="italic"
+            android:textColor="@color/font_color"
+            android:textSize="@dimen/font_size"
+            android:background="@color/btn_bg_color"/>
     </LinearLayout>
 </LinearLayout>
