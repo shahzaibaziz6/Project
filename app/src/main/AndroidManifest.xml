@@ -19,8 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SendReceiveActivity" />
-        <activity android:name=".SendActivity" />
-        <activity android:name=".ReceivceActivity"></activity>
+        <activity android:name=".ReceivceActivity" />
+        <activity
+            android:name=".SendActivity"
+            android:label="@string/title_activity_send"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
