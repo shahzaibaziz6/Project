@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/splash"
     tools:context=".SplashActivity">
 
+    <ImageView
+        android:id="@+id/iv_splash_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/splash"
+        android:scaleType="center"/>
     <ProgressBar
         android:id="@+id/pb_splash_welcome"
         android:layout_width="match_parent"
