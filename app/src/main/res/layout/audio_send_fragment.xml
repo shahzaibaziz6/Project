@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <ListView
         android:id="@+id/lv_send_fragment_audio"
         android:layout_width="match_parent"
-        android:layout_height="327sp"></ListView>
+        android:layout_height="match_parent"
+        android:layout_weight="6"></ListView>
 
 
     <Button
@@ -16,6 +18,8 @@
         android:layout_height="74dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginBottom="62dp"
-        android:text="@string/send" />
-</RelativeLayout>
+        android:text="@string/send"
+        android:layout_weight="1"/>
+</LinearLayout>
