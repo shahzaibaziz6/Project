@@ -15,7 +15,7 @@
     <ProgressBar
         android:id="@+id/pb_splash_welcome"
         android:layout_width="match_parent"
-        android:layout_height="107dp"
+        android:layout_height="@dimen/Progress_bar_height"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 

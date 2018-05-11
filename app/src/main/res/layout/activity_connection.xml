@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ConnectionActivity">
+
+    <EditText
+        android:id="@+id/etv_connection_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btn_connection_discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover" />
+
+    <ListView
+        android:background="@color/colorPrimary"
+        android:id="@+id/lv_connection_clients"
+        android:layout_width="match_parent"
+        android:tooltipText="this is my test"
+        android:layout_height="250sp"></ListView>
+
+    <Button
+        android:id="@+id/btn_connection_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:padding="@dimen/appbar_padding_top"
+        android:layout_gravity="center"/>
+</LinearLayout>

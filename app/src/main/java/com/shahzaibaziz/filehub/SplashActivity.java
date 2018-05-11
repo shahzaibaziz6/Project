@@ -17,9 +17,9 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
-//        getActionBar().hide();
         ivSplash= findViewById(R.id.iv_splash_background);
         pbSplash = findViewById(R.id.pb_splash_welcome);
         ivSplash.animate().alpha(0).setDuration(5000);
@@ -28,10 +28,16 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent mainIntent = new Intent(SplashActivity.this,SendReceiveActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
-                SplashActivity.this.finish();
+                startActivity(mainIntent);
+
             }
         }, SPLASH_DISPLAY_LENGTH);
 
     }
+    void Init()
+    {
+
+    }
+
+
 }

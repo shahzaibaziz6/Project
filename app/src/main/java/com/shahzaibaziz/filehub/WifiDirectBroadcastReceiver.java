@@ -1,18 +1,22 @@
+package com.shahzaibaziz.filehub;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.NetworkInfo;
+import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.widget.Toast;
 
 import com.shahzaibaziz.filehub.SendActivity;
+import com.shahzaibaziz.filehub.SendReceiveActivity;
 
 public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
     static final int MESSAGE_READ=1;
     private WifiP2pManager mManager;
     private WifiP2pManager.Channel mChannel;
-    private SendActivity mActivity;
-    public WifiDirectBroadcastReceiver(WifiP2pManager m,WifiP2pManager.Channel c,SendActivity main)
+    private ConnectionActivity mActivity;
+    public WifiDirectBroadcastReceiver(WifiP2pManager m, WifiP2pManager.Channel c, ConnectionActivity main)
     {
         mManager=m;
         mChannel =c;
@@ -39,12 +43,10 @@ public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
         }
         else if(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION.equals(action))
         {
-
-            if (mManager!=null)
+            if(mManager!=null)
             {
-//
-// mManager.requestConnectionInfo(mChannel, mainActivity.peerListListener);
-//                mManager.requestPeers(mChannel,mainActivity.peerListListener);
+                mManager.requestPeers(mChannel,mActivity.peerListListener);
+
             }
 
         }
@@ -58,12 +60,12 @@ public class WifiDirectBroadcastReceiver extends BroadcastReceiver {
             NetworkInfo networkInfo= intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO);
             if(networkInfo.isConnected())
             {
-//                mManager.requestConnectionInfo(mChannel,mainActivity.connectionInfoListener);
+              mManager.requestConnectionInfo(mChannel,mActivity.connectionInfoListener);
 
             }
             else
             {
-//                mainActivity.tvConnectionStatus.setText("device Disconnected");
+                Toast.makeText(context,"Device is disconnected",Toast.LENGTH_SHORT).show();
             }
 
 
